@@ -10,6 +10,7 @@ public class TransactionService extends transactionserviceGrpc.transactionservic
         String currencyForm=request.getCurencyfrom();
         String currencyTo=request.getCurencyto();
         double amount = request.getAmount();
+        System.out.println(currencyForm+" to: "+currencyTo+" amt:"+amount);
         Transaction.convertcurrencyresponse response=Transaction.convertcurrencyresponse.newBuilder()
                 .setCurencyfrom(currencyForm)
                 .setCurencyto(currencyTo)
