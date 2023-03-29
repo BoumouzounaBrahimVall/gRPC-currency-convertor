@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package ="gen";
+service transactionservice{
+  rpc convert(convertcurrencyrequest) returns (convertcurrencyresponse);
+}
+message convertcurrencyrequest{
+  string curencyfrom=1;
+  string curencyto=2;
+  double amount=3;
+}
+message convertcurrencyresponse{
+  string curencyfrom=1;
+  string curencyto=2;
+  double amount=3;
+  double result=4;
+}
